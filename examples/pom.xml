@@ -78,13 +78,13 @@
               <phase>generate-sources</phase>
               <configuration>
                 <target>
-                  <mkdir dir="src/main/generated/org/capnproto/examples"/>
+                  <mkdir dir="src/main/generated"/>
                   <exec executable="capnp" failonerror="true">
                     <arg value="compile"/>
                     <arg value="-I"/>
                     <arg value="../compiler/src/main/schema/"/>
                     <arg value="--src-prefix=src/main/schema/"/>
-                    <arg value="-o../capnpc-java:src/main/generated/org/capnproto/examples"/>
+                    <arg value="-o../capnpc-java:src/main/generated"/>
                     <arg value="src/main/schema/addressbook.capnp"/>
                     <env key="CAPNP_LITE" value="1"/>
                   </exec>
@@ -93,7 +93,7 @@
                     <arg value="-I"/>
                     <arg value="../compiler/src/main/schema/"/>
                     <arg value="--src-prefix=src/main/schema/"/>
-                    <arg value="-o../capnpc-java:src/main/generated/org/capnproto/examples"/>
+                    <arg value="-o../capnpc-java:src/main/generated"/>
                     <arg value="src/main/schema/calculator.capnp"/>
                 </exec>
                 </target>
